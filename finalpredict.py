@@ -1,37 +1,38 @@
 import os
 import numpy as np
-import h5py
-import matplotlib.pyplot as plt
+# import h5py
+# import matplotlib.pyplot as plt
 #For RPi Modify this line 
-import tensorflow as tf
-from sys import getsizeof
+# import tensorflow as tf
+import tflite_runtime.interpreter as tflite
+# from sys import getsizeof
 import cv2
-import keyboard
+# import keyboard
 from time import sleep
 
-import cv2
+# import cv2
 import time
 import requests
 import random
-import numpy as np
+# import numpy as np
 # import onnxruntime as ort
 # from PIL import Image
 from pathlib import Path
 from collections import OrderedDict,namedtuple
-import tensorflow as tf
-import matplotlib.pyplot as plt
-import os
-import cv2 as cv
-import os
-import cv2
-import numpy as np
-import glob
-import random
+# import tensorflow as tf
+# import matplotlib.pyplot as plt
+# import os
+# import cv2 as cv
+# import os
+# import cv2
+# import numpy as np
+# import glob
+# import random
 
 
 
 # Load the TFLite model and allocate tensors.
-interpreter = tf.lite.Interpreter(model_path="yolov7_model_tiny_120epochs.tflite")
+interpreter = tflite.Interpreter(model_path="yolov7_model_tiny_120epochs.tflite")
 
 
 
