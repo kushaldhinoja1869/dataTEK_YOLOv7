@@ -141,4 +141,4 @@ while True:
 	namekd = str(kd)+".jpg"
 	kd = kd+1
 	imf = cv2.cvtColor(ori_images[0], cv2.COLOR_RGB2BGR)
-	cv2.imwrite(namekd,imf)
+# 	cv2.imwrite(namekd,imf)
