@@ -32,7 +32,7 @@ from collections import OrderedDict,namedtuple
 
 
 # Load the TFLite model and allocate tensors.
-interpreter = tflite.Interpreter(model_path="yolov7_model_tiny_120epochs.tflite")
+interpreter = tflite.Interpreter(model_path="yolov7_model_500ch_60epoch.tflite")
 
 
 
