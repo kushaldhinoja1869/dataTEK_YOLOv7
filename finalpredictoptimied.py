@@ -1,7 +1,7 @@
 import os
 import numpy as np
-# import tflite_runtime.interpreter as tflite
-import tensorflow as tf
+import tflite_runtime.interpreter as tflite
+# import tensorflow as tf
 import cv2
 from time import sleep
 import time
@@ -11,7 +11,7 @@ from pathlib import Path
 from collections import OrderedDict,namedtuple
 
 # Load the TFLite model and allocate tensors.
-interpreter = tf.lite.Interpreter(model_path="yolov7_model_500ch_60epoch.tflite")
+interpreter = tflite.Interpreter(model_path="yolov7_model_500ch_60epoch.tflite")
 interpreter.allocate_tensors()
 # Get input and output tensors.
 input_details = interpreter.get_input_details()
@@ -58,7 +58,7 @@ cv2.destroyAllWindows()
 cap = cv2.VideoCapture(1)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
-cap.set(cv2.CAP_PROP_CONVERT_RGB, 1.0)
+# cap.set(cv2.CAP_PROP_CONVERT_RGB, 1.0)
 
 	
 
